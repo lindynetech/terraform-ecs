@@ -6,7 +6,7 @@ phases:
     commands:
       - curl -s -qL -o terraform.zip https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip
       - unzip -o terraform.zip
-      - install terraform /usr/bin/ && rm -f terraform*
+      - install terraform /usr/bin/
   pre_build:
     commands:
     - echo Logging in to Docker Hub...
@@ -28,8 +28,8 @@ phases:
     - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
     - export AWS_DEFAULT_REGION="us-east-1"
     - ls -la
-    #- terraform init
-    #- terraform apply -var "imagetag=$IMAGE_TAG" -input=false -var-file=terraform.tfvars --auto-approve
+    - terraform init
+    - terraform apply -var "imagetag=$IMAGE_TAG" -input=false --auto-approve
  
  
  
