@@ -27,7 +27,6 @@ phases:
     - export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
     - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
     - export AWS_DEFAULT_REGION="us-east-1"
-    - ls -la
     - terraform init
     - terraform apply -var "imagetag=$IMAGE_TAG" -input=false --auto-approve
  

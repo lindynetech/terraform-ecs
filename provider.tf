@@ -7,8 +7,7 @@ terraform {
   }
 }
 
-provider aws {
-}
+provider aws {}
 
 terraform {
   backend "s3" {
