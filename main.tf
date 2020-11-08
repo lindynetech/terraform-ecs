@@ -53,7 +53,7 @@ resource "aws_ecs_task_definition" "tf-td" {
   task_role_arn         = ""
   execution_role_arn    = "arn:aws:iam::359591046374:role/ecsTaskExecutionRole"
   network_mode          = "bridge"
-  container_definitions = file("tf-td.json")
+  container_definitions = templatefile("tf-td.tmpl", { imagetag = var.imagetag })
 }
 
 data "aws_ecs_container_definition" "demoapp" {

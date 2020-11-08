@@ -1,3 +1,3 @@
-imagename = "docker.io/lindynetech/esctfdemo:v1"
-imagetag  = "v1"
+imagename = "docker.io/lindynetech/esctfdemo"
+imagetag  = "v3"
 region    = "us-east-1"
